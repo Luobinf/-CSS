@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>放大镜</title>
+    <style>
+        .fdj {
+            width: 20px;
+            height: 20px;
+            border: 1px solid black;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .fdj::after {
+            content: '';
+            display: inline-block;
+            height: 12px;
+            width: 1px;
+            background-color: black;
+            position: absolute;
+            left: 100%;
+            top: 16px;
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <!--用纯css画一个放大镜-->
+    <div class="fdj"></div>
+</body>
+
+</html>

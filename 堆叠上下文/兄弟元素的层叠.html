@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>兄弟元素的层叠</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            margin-top: -20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 兄弟元素的层叠规则是后面的会覆盖前面的 -->
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

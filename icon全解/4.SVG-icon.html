@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SVG-icon</title>
+    <style>
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+        svg.github {
+            /* 如果你的svg本来就是彩色的那么无法改变颜色 */
+            fill: orange;
+            height: 60px;
+            width: 60px;
+            border: 1px solid red;
+        }
+    </style>
+    <script src="http://at.alicdn.com/t/font_1316574_yb36cb92q7g.js"></script>
+</head>
+
+<body>
+    <!--使用SVG来写 -->
+    <!--SVG支持多色图标，不再局限于单色 -->
+    <!--SVG默认水平垂直居中 -->
+    <svg class="icon github" aria-hidden="true">
+        <use xlink:href="#icon-github"></use>
+    </svg>
+</body>
+
+</html>

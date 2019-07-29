@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul,ol {
+            list-style: none;
+        }
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        header {
+            background-color: gray;
+        }
+        header .topBar {
+            width: 600px;
+            margin: 0 auto;
+        }
+        header .topBar .logo {
+            float: left;
+        }
+        header .topBar .logo .title{
+            font-size: 14px;
+            line-height: 24px;
+            padding: 6px 24px;
+        }
+        header .topBar ul.nav {
+            float: right;
+        }
+        header .topBar ul.nav li{
+            float: left;
+        }
+        header .topBar ul.nav li div{
+            line-height: 24px;
+            padding: 6px 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="topBar clearfix">
+            <h1 class="logo">
+                <div class="title">你好</div>
+            </h1>
+            <ul class="nav clearfix">
+                <li>
+                    <div>1</div>
+                </li>
+                <li>
+                    <div>2</div>
+                </li>
+                <li>
+                    <div>3</div>
+                </li>
+            </ul>
+        </div>
+    </header>
+</body>
+<!-- http://js.jirengu.com/woberimoxi/5/edit?html,css,output -->
+</html>

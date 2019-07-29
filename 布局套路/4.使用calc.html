@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>使用calc</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .banner {
+            width: 800px;
+            height: 300px;
+            background-color: aqua;
+            margin: 0 auto;
+        }
+
+        .pictures {
+            width: 800px;
+            margin: 0 auto 100px;
+        }
+
+        .picture-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -4px;
+        }
+
+        .pictuer {
+            /* 注意这个父亲元素是picture-wrapper，它的总宽度是808px */
+            width: calc(25% - 8px);
+            /* width: 194px; */
+            height: 194px;
+            background-color: gray;
+            /* border: 1px solid black; */
+            margin: 10px 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 使用calc计算公式自适应宽度,将flex和负margin结合起来 -->
+    <div class="banner"></div>
+    <div class="pictures">
+        <div class="picture-wrapper">
+            <div class="pictuer"></div>
+            <div class="pictuer"></div>
+            <div class="pictuer"></div>
+            <div class="pictuer"></div>
+            <div class="pictuer"></div>
+            <div class="pictuer"></div>
+            <div class="pictuer"></div>
+            <div class="pictuer"></div>
+        </div>
+    </div>
+</body>
+
+</html>

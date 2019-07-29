@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文字溢出处理</title>
+    <style>
+        /* 以下是单行文本的溢出处理 */
+        .single {
+            width: 200px;
+            border: 1px solid red;
+            /*将文字设置成不换行*/
+            white-space: nowrap;
+            /* 将溢出的文本设置成省略号 */
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        /* 多行文本溢出处理 */
+        .mul {
+            width: 200px;
+            border: 1px solid rebeccapurple;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="single">
+        1 2 3 45 8966 56666 5 8 10 25
+        1 2 3 45 8966 56666 5 8 10 100
+        1 2 3 45 8966 56666 5 8 10 25
+        1 2 3 45 8966 56666 277 288
+    </p>
+    <p class="mul">
+        1 2 3 45 8966 56666 5 8 10 25
+        1 2 3 45 8966 56666 5 8 10 100
+        1 2 3 45 8966 56666 5 8 10 25
+        1 2 3 45 8966 56666 277 288
+    </p>
+</body>
+
+</html>

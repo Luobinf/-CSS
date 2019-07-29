@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .banner {
+            width: 800px;
+            height: 300px;
+            background-color: aqua;
+            margin: 0 auto;
+        }
+        .pictures {
+            width: 800px;
+            margin: 0 auto 100px;
+            display: flex;
+            flex-wrap: wrap;
+            /* space-between表示每两个项目之间的距离是相等的 */
+            justify-content: space-between;
+            /* space-around表示每一个项目的两边的边距都是一样的 */
+            /* justify-content: space-around; */
+            /* border: 1px solid rebeccapurple; */
+        }
+        .pictuer {
+            box-sizing: border-box;
+            width: 191px;
+            height: 191px;
+            background-color: gray;
+            /* border: 1px solid red; */
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner"></div>
+    <div class="pictures">
+        <div class="pictuer"></div>
+        <div class="pictuer"></div>
+        <div class="pictuer"></div>
+        <div class="pictuer"></div>
+        <div class="pictuer"></div>
+        <div class="pictuer"></div>
+        <div class="pictuer"></div>
+        <!-- <div class="pictuer"></div> -->
+    </div>
+    <!-- 使用flex布局会有一个bug，当第二行只有三个的时候会自动对齐，看效果图 -->
+    <!-- 那么如何解决呢? -->
+</body>
+</html>

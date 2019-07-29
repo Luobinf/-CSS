@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>main部分float实现</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        header {
+            background-color: gray;
+        }
+
+        header .topBar {
+            width: 600px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+
+        header .topBar .logo .title {
+            font-size: 14px;
+            line-height: 24px;
+            padding: 6px 26px;
+        }
+
+        header .topBar ul.nav {
+            display: flex;
+        }
+
+        header .topBar ul.nav li div {
+            line-height: 24px;
+            padding: 6px 25px;
+            /* border: 1px solid red; */
+        }
+
+        main.parent {
+            width: 750px;
+            margin: 0 auto;
+            /* display: flex; */
+            /* flex-wrap: wrap; */
+            /* justify-content: space-between; */
+            /* border: 1px solid black; */
+        }
+
+        main.parent .child {
+            width: 180px;
+            height: 100px;
+            background-color: orange;
+            float: left;
+            margin: 10px 5px;
+            }
+
+        /* n是从0开始的，但是没有第0个项目，故会从第四个项目开始....... */
+        /* main.parent > .child:nth-child(4n) {
+           margin-right: 0;
+        } */
+        /* 以上或者用负margin来实现 */
+        /* main用来做居中处理 child外面再套一层div用来做负margin */
+        main.parent .child-wrapper {
+            margin: 0 -5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="topBar">
+            <h1 class="logo">
+                <div class="title">你好</div>
+            </h1>
+            <ul class="nav">
+                <li>
+                    <div>1</div>
+                </li>
+                <li>
+                    <div>2</div>
+                </li>
+                <li>
+                    <div>3</div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main class="parent">
+        <div class="child-wrapper clearfix">
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <!-- <div class="child"></div> -->
+        </div>
+    </main>
+    <!-- 上面的main部分使用负margin来实现 -->
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul,ol {
+            list-style: none;
+        }
+        header {
+            background-color: gray;
+        }
+        header .topBar {
+            width: 600px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+        header .topBar .logo .title{
+            font-size: 14px;
+            line-height: 24px;
+            padding: 6px 26px;
+        }
+        header .topBar ul.nav {
+            display: flex;
+        }
+        header .topBar ul.nav li div{
+            line-height: 24px;
+            padding: 6px 25px;
+            /* border: 1px solid red; */
+        }
+        main.parent {
+            width: 750px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        main.parent .child {
+            width: 180px;
+            height: 100px;
+            background-color: orange;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="topBar">
+            <h1 class="logo">
+                <div class="title">你好</div>
+            </h1>
+            <ul class="nav">
+                <li>
+                    <div>1</div>
+                </li>
+                <li>
+                    <div>2</div>
+                </li>
+                <li>
+                    <div>3</div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </main>
+</body>
+<!-- http://js.jirengu.com/woberimoxi/6/edit?html,css,output -->
+<!-- http://js.jirengu.com/woberimoxi/5/edit?html,css,output -->
+</html>

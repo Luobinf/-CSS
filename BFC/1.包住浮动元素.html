@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BFC可以包住浮动元素</title>
+    <style>
+        .parent {
+            border: 1px solid black;
+            /* 浮动元素可以触发BFC */
+            float: left; 
+        }
+        .child {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            float: left;
+        }
+        .brother1 {
+            width: 100px;
+            height: 300px;
+            background-color: aqua;
+            /* float: left; */
+        }
+        .brother2 {
+            height: 300px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <!-- 功能1: 用BFC包住浮动元素。设置成块级格式化上下文的元素，其高度计算时会包含浮动元素。 -->
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+    <!-- 功能2: 兄弟之间划清界限-->
+    <div class="brother1"></div>
+    <div class="brother2"></div>
+</body>
+</html>

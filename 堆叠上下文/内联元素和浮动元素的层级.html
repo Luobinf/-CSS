@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>内联元素和浮动元素的层级</title>
+    <style>
+        .parent {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            float: left;
+        }
+        .child{
+            margin-left: -20px;
+        }
+    </style>
+</head>
+<body>
+   <div class="parent"></div> 
+   <span class="child">你好</span>
+   <!-- 由上可以看到行内元素的层级要比浮动元素高，很明显，可以看到行内元素在浮动元素上面。 -->
+</body>
+</html>

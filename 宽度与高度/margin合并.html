@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>margin合并的情况</title>
+    <style>
+        body,html{
+            height: 100%;
+        }
+        .parent{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: orange;
+        }
+        .parent > .child{
+            background-color: skyblue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- 水平垂直居中 -->
+    <main class="parent">
+        <div class="child">hello world!</div>
+    </main>
+</body>
+</html>

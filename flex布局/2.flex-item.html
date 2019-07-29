@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>flex-item</title>
+    <style>
+        .parent {
+            display: flex;
+            background-color: skyblue;
+        }
+        .child {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            margin: 10px;
+            /* 增长比例 ：剩余空间过多时，用来分配空间 */
+            /* flex-grow: 1; */
+            /* 收缩比例 ：剩余空间不够时，用来收缩自身大小的比例*/
+            /* flex-shrink: 1; */
+        }
+        .child:first-child {
+            flex-shrink: 1;
+            order: 4;
+        }
+        
+        .child:nth-child(2) {
+            flex-shrink: 2;
+            order: 3;
+        }
+        .child:nth-child(3) {
+            flex-shrink: 2;
+            order: 2;
+        }
+        .child:last-child {
+            flex-shrink: 3;
+            order: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- flex-item里面的order是用来改变子项目的顺序的 -->
+    <div class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+    </div>
+</body>
+</html>

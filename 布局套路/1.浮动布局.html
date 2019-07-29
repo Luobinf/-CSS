@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>浮动布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .parent {
+            border: 1px solid red;
+        }
+        .child {
+            float: left;
+            border: 1px solid skyblue;
+        }
+        .child:first-child {
+            margin-right: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent clearfix">
+        <div class="child">儿子一</div>
+        <div class="child">儿子二</div>
+    </div>
+
+    <!-- 注意经过float布局之后的div不要直接加内容，应该在里面再加div来写内容 -->
+    <!-- 让每一个div有各自的作用比较好 -->
+</body>
+</html>

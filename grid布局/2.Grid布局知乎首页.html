@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>知乎首页Grid布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body,html {
+            width: 100%;
+            background-color: #f6f6f6;
+        }
+        body {
+            display: grid;
+            /* 先画格子 */
+            grid: 52px auto 80px/ 1fr 694px 296px 1fr;
+            grid-gap: 10px;
+            height: 100vh;
+        }
+        header {
+            background-color: white;
+            grid-column: 1 / span 4;
+            grid-row: 1 / 2;
+            display: grid;
+            /* 用来居中 */
+            justify-content: center;
+            align-items: center; 
+            background-color: gray;
+        }
+        main {
+            background-color: orange;
+            /* 第二根线开始到第三根线结束 */
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+        aside {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+            /* background-color: red; */
+            display: grid;
+            grid: 160px 160px auto / auto;
+            /* 行列之间的缝隙 */
+            grid-gap: 10px;
+        }
+        aside > .question {
+            background-color: aqua;
+        }
+        aside > .author {
+            background-color: salmon;
+        }
+        aside > .other {
+            background-color: blueviolet;
+        }
+        footer {
+            grid-column: 1 / span 4;
+            grid-row: 3 / 4;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 知乎首页大致进行布局 -->
+    <!-- 使用grid布局来画块 -->
+    <header>
+      header
+    </header>
+    <main>main</main>
+    <aside>
+        <div class="question">回答</div>
+        <div class="author">作者</div>
+        <div class="other">其它</div>
+    </aside>
+    <footer>footer</footer>
+</body>
+</html>

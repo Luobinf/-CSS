@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BFC可以包住浮动元素</title>
+    <style>
+        .brother1 {
+            width: 100px;
+            height: 300px;
+            background-color: aqua;
+            float: left;
+            margin-right: 20px;
+        }
+        .brother2 {
+            width: auto;
+            height: 300px;
+            background-color: orange;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- 功能2: 兄弟之间划清界限-->
+    <!-- 触发BFC来做两栏布局 -->
+    <div class="brother1"></div>
+    <div class="brother2"></div>
+</body>
+</html>

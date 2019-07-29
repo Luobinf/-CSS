@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>行内元素的高度是由谁决定的</title>
+    <style>
+        span{
+            border: 1px solid rebeccapurple;
+            padding: 10px;
+        }
+        div{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 行内元素(内联元素)的高度是由行高决定的，宽度是由文字的个数决定的 -->
+    <!-- 但是padding、border、margin是会影响元素的宽度的，但不会影响高度 -->
+    <!-- 为什么不会影响高度呢?看下面例子：div元素并没有将span元素完全包裹起来 -->
+    <div>
+        <span>你好，中国！</span>
+    </div>
+</body>
+</html>

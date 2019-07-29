@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>flex布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul,ol {
+            list-style: none;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            /* 这句代码的意思是默认占据整个手机屏幕的高度 */
+            height: 100vh;
+        }
+        header {
+            height: 100px;
+            background-color: gray;
+        }
+        footer > ul {
+            height: 100px;
+            background-color: skyblue;
+            display: flex;
+        }
+        main {
+            /* 默认占据剩余的所有空间 */
+            flex-grow: 1;
+            /* 这样header和footer就会固定在那里了 */
+            overflow: auto;
+        }
+        footer > ul > li {
+            width: 25%;
+            background-color: bisque;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>header</header>
+        <main>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+        </main>
+        <footer>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>

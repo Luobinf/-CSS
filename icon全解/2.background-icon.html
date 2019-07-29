@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>将所有图标都放在一个background上</title>
+    <style>
+        .icongithub,
+        .iconweibo,
+        .iconweixin {
+            display: inline-block;
+            background: url('./img/sprites.png') no-repeat;
+            overflow: hidden;
+            text-indent: -9999px;
+            text-align: left;
+            border: 1px solid rebeccapurple;
+        }
+
+        .icongithub {
+            background-position: -10px -0px;
+            width: 200px;
+            height: 200px;
+        }
+
+        .iconweibo {
+            background-position: -10px -210px;
+            width: 200px;
+            height: 200px;
+        }
+
+        .iconweixin {
+            background-position: -10px -420px;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--将所有图标都放到一张图上作为背景图，这样就只需要进行一次http请求就可以了 -->
+    <!--只需要移动背景就可以了展示你所需要的东西 -->
+    <!--怎么做雪碧图?自需要用css sprite generator就可以了 -->
+    <div class="icongithub"></div>
+    <div class="iconweibo"></div>
+    <div class="iconweixin"></div>
+</body>
+
+</html>

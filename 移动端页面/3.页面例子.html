@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>响应式页面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        nav {
+            position: relative;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            background-color: skyblue;
+            border-radius:50%; 
+        }
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        ul > li {
+            float: left;
+        }
+        #btn {
+            position: absolute;
+            right: 0;
+            top: 25px;
+        }
+         .nav-bar {
+           display: none;
+        }
+        .nav-bar.active {
+            background-color: aqua;
+            display: flex;
+            justify-content: space-between;
+        }
+        @media (min-width: 426px) {
+            #btn {
+                display: none;
+            }
+            .nav-bar {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo"></div>
+        <button id="btn">菜单</button>
+        <ul id="ul" class="nav-bar">
+            <li><a href="">导航1</a></li>
+            <li><a href="">导航2</a></li>
+            <li><a href="">导航3</a></li>
+            <li><a href="">导航4</a></li>
+            <li><a href="">导航5</a></li>
+        </ul>
+    </nav>
+    <script>
+        var oBtn = document.getElementById('btn');
+        oBtn.onclick = function () {
+            // if (ul.style.display === 'none') {
+            //     ul.style.display = 'flex';
+            // } else {
+            //     ul.style.display = 'none';
+            // }
+            //建议不要用js去直接更改style，切换类名比较好
+            //这句话的意思是没有active这个类名，那么给你加上这个类名。有active这个类名，那么给你去掉。
+            ul.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
