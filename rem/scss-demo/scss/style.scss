@@ -1,0 +1,25 @@
+
+// 下面是用来将px值转换成rem值的
+@function px2rem($px){
+  @return $px / $baseFontSize + rem;
+}
+$baseFontSize : 600;
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 16px;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.child {
+  width: px2rem(240);
+  height: px2rem(120);
+  background-color: skyblue;
+  margin: px2rem(30) px2rem(30);
+  float: left;
+}

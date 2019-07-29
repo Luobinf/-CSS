@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>手机端布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .child {
+            float: left;
+            width: 40%;
+            margin: 0 5%;
+            background-color: orange;
+            margin-top: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <!-- 1.百分比布局的问题高度与宽度无法配合，因为不知道宽度是多少 -->
+    <!-- 比如如何做一个2：1的盒子 -->
+    <div class="parent clearfix">
+        <div class="child">40%</div>
+        <div class="child">40%</div>
+        <div class="child">40%</div>
+        <div class="child">40%</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用rem来动态的适配手机页面</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script>
+        var pageWidth = window.innerWidth;
+        document.write(`<style>html{font-size: ${pageWidth}px;}</style>`);
+        // document.write('<style>html{font-size:'+ pageWidth +'px;}</style>');
+        console.log(pageWidth);
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-size: 16px;
+        }
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .child {
+            width: 0.4rem;
+            height: 0.2rem;
+            background-color: skyblue;
+            margin: 0.05rem 0.05rem;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+  <div class="parent clearfix">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+  </div>
+  <!-- 可以将px和rem混合使用 -->
+  <!-- 注意：像素只能取整数，例如0px、1px、2px等 -->
+  <!-- 当使用rem进行换算之后，小于12px时，可直接用px。谷歌浏览器能够识别的最小 -->
+  <!-- 像素为12px -->
+</body>
+</html>
