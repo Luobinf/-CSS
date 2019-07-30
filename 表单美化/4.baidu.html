@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>baidu search</title>
+    <script src="http://at.alicdn.com/t/font_1322440_3d66ucvyskl.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul,ol {
+            list-style: none;
+        }
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        body,html {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .search-wrapper {
+            width: 640px;
+            position: relative;
+            display: flex;
+        }
+        .search-wrapper input {
+            width: 535px;
+            height: 38px;
+            border: 1px solid #b8b8b8;
+            line-height: 38px;
+            /* 用来调整光标高度 */
+            font-size: 18px;
+            padding-left: 10px;
+            border-right: 0;
+        }
+        .search-wrapper input:focus {
+            border-color:#3388ff;
+            outline: none;
+        }
+        .search-wrapper .baiduyixia {
+            box-sizing: content-box;
+            width: 105px;
+            height: 38px;
+            float: left;
+            border: none;
+            background-color: #3388ff;
+            color: white;
+            /* transition: all 0.3s; */
+            
+        }
+        .search-wrapper .baiduyixia:hover {
+           background-color: #317ef3;
+           cursor: pointer;
+           box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.2) 
+        }
+        .search-wrapper .baiduyixia:focus {
+            outline: none;
+        }
+        .search-wrapper svg.icon{
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            right: 10px;
+            top: 0;
+            margin: 10px 0;
+        }
+        .search-wrapper svg.icon:hover{
+            fill: #3388ff;
+            cursor: pointer;
+        }
+        .ipt-wrapper {
+            display: inline-block;
+            position: relative;
+        }
+        ul.suggestion-search {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 38px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-wrapper">
+        <span class="ipt-wrapper">
+            <input type="text">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-camera"></use>
+            </svg>
+        </span>
+        <button class="baiduyixia">百度一下</button>
+        <ul class="suggestion-search">
+            <li>建议1</li>
+            <li>建议2</li>
+            <li>建议3</li>
+            <li>建议4</li>
+        </ul>
+    </div>
+</body>
+</html>

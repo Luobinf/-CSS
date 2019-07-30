@@ -5,8 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>按钮美化</title>
+    <style>
+        .lbButton {
+            box-sizing: border-box;
+            background: none;
+            border: none;
+            height: 36px;
+            padding:  0 16px;
+            line-height: 36px;
+            font-size: 14px;
+            position: relative;
+            background: skyblue;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .lbButton:hover {
+            background: #e5e5e5;
+            transition: all 0.5s;
+        }
+        .lbButton:focus {
+            /* background: #e5e5e5; */
+            outline: none;
+        }
+        .lbButton span.circle {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            /* 出现涟漪的效果，也就是往外面散开 */
+            border-radius: 50%;
+            background-color: red;
+            width: 10px;
+            height: 10px;
+            margin-left: -5px;
+            margin-top: -5px;
+            visibility: hidden;
+            /* 用display为none的话就会没有动画效果 */
+            /* display: none; */
+            pointer-events: none;
+            z-index: -1;
+        }
+        .lbButton span.circle.active {
+           transform: scale(7);
+           transition: transform 0.5s;
+           visibility: visible;
+        }
+    </style>
 </head>
 <body>
-    
+    <button class="lbButton" id="btn">
+        按钮
+        <span class="circle"></span>
+    </button>
+    <script>
+        var oBtn = document.getElementById('btn')
+        var oCircle = document.getElementsByClassName('circle')[0]
+        oBtn.addEventListener('click',function () {
+            oCircle.classList.add('active')
+        })
+        // 监听动画结束事件
+        oCircle.addEventListener('transitionend',function () {
+            console.log('jiesu')
+            oCircle.classList.remove('active')
+        })
+    </script>
 </body>
 </html>
