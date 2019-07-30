@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片文件上传</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul,ol {
+            list-style: none;
+        }
+        body,html {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .pictureSubmit {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            /* border: 1px solid red; */
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+        }
+        .pictureSubmit img {
+            max-width: 100%;
+            vertical-align: bottom;
+        }
+        .pictureSubmit input[type=file] {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: aqua;
+            opacity: 0;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .pictureSubmit .mask {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 0;
+            color: white;
+        }
+        .pictureSubmit:hover .mask {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="pictureSubmit">
+        <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3779248694,746587916&fm=26&gp=0.jpg" alt="">
+        <input type="file">
+        <div class="mask">
+            上传
+        </div>
+    </div>
+</body>
+</html>
