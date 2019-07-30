@@ -96,12 +96,15 @@
             top: 38px;
             background-color: skyblue;
         }
+        ul.suggestion-search.active {
+          display: block;
+        }
     </style>
 </head>
 <body>
     <div class="search-wrapper">
         <span class="ipt-wrapper">
-            <input type="text">
+            <input type="text" id="ipt">
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-camera"></use>
             </svg>
@@ -114,5 +117,19 @@
             <li>建议4</li>
         </ul>
     </div>
+    <script>
+        // 当一个input、textarea、select元素的value值被修改了之后，会触发input事件
+        //而change事件是当value值被提交的时候才会出发，例如按回车键。
+        let oIpt = document.getElementById('ipt')
+        let oSuggestion = document.getElementsByClassName('suggestion-search')[0]
+        oIpt.addEventListener('input',function () {
+            // console.log(45)
+            oSuggestion.classList.add('active')
+        })
+        // 失去焦点时移除
+        oIpt.addEventListener('blur',function () {
+            oSuggestion.classList.remove('active')
+        })
+    </script>
 </body>
 </html>
