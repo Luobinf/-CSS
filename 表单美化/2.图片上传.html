@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片上传</title>
+    <style>
+        .imagePicker {
+            border: 1px solid red;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+        .imagePicker img {
+            max-width: 100%;
+            /* max-height: 100%; */
+            /* border: 1px solid black; */
+            vertical-align: bottom;
+        }
+        .imagePicker input[type=file] {
+            position: absolute;
+            background-color: aqua;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            z-index: 1;
+            cursor: pointer;
+        }
+        .imagePicker .mask {
+            display: none;
+            position: absolute;
+            /* left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%); */
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .imagePicker:hover .mask {
+            display: flex;
+            /* cursor: pointer; */
+        }
+    </style>
+</head>
+<body>
+    <!-- 注意：图片是默认和基线对齐的 -->
+    <!-- 图片只要设置宽度就会自适应的居中 -->
+    <div class="imagePicker">
+        <img src="https://jirengu.com/addons/theme/hunger-new/logo.8b0aeb73.png" alt="">
+        <input type="file" id="imageInput">
+        <div class="mask">
+            上传
+        </div>
+    </div>
+    <script>
+        imageInput.onchange = function (ev) {
+            let formData = new formData()
+            formData.append('xxx',ev.target.files[0])
+            console.log(ev.target.files[0])
+            ev.target.value = ''
+        }
+        // 以上再点击按钮编辑时，将无法上传文件，因为mask盖住了input，自需要
+        // 将input的z-index提高就好。
+    </script>
+</body>
+</html>

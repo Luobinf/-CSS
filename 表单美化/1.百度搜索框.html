@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>百度搜索框</title>
+    <script src="http://at.alicdn.com/t/font_1322440_3d66ucvyskl.js"></script>
+    <style>
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        body {
+            height: 100vh;
+            border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            /* border: 1px solid skyblue; */
+            display: flex;
+            position: relative;
+        }
+
+        .suggestion {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 35px;
+            background-color: gray;
+        }
+        .suggestion.active {
+            display: block;
+        }
+        .inputWrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .buttonWrapper {
+            position: absolute;
+            /* border: 1px solid red; */
+            right: 0;
+            top: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+        }
+        .buttonWrapper .splitLine {
+            width: 0;
+            height: 16px;
+            border-left: 1px solid #b8b8b8;
+            margin: 0 12px 0 8px;
+        }
+        .inputWrapper {
+            float: left;
+        }
+
+        .inputWrapper+button {
+            float: left;
+            background-color: #4b94fc;
+            border: none;
+            outline: none;
+            color: white;
+            font-size: 14px;
+            padding: 0 20px;
+        }
+        .inputWrapper+button:hover {
+            cursor: pointer;
+            background-color: #3781f0;
+            box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.2) 
+        }
+        .inputWrapper input[type='text'] {
+            border: 1px solid #b8b8b8;
+            width: 540px;
+            height: 35px;
+            padding-left: 10px;
+            /* 用来修改光标的高度 */
+            font-size: 15px;
+            line-height: 35px;
+        }
+
+        /* 获取焦点时 */
+        .inputWrapper input[type='text']:focus {
+            outline: none;
+            border-color: #4b94fc;
+        }
+        .inputWrapper svg.icon {
+            width: 20px;
+            height: 20px;
+            fill: #b8b8b8;
+        }
+        .inputWrapper svg.icon:hover {
+            fill: #4b94fc;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- button按钮里面的文字会自动居中 -->
+    <div class="wrapper">
+        <span class="inputWrapper">
+            <input type="text" id="keyword" autocomplete = "off">
+            <span class="buttonWrapper">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-microphoneicon"></use>
+                </svg>
+                <span class="splitLine"></span>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-camera"></use>
+                </svg>
+            </span>
+        </span>
+        <button>百度一下</button>
+        <ul class="suggestion" id="suggestion">
+            <li>选项1</li>
+            <li>选项2</li>
+            <li>选项3</li>
+            <li>选项3</li>
+        </ul>
+    </div>
+    <script>
+        keyword.oninput = function (ev) {
+            // 最好用js来改变类名，不要直接改变样式。
+            var value = keyword.value
+            if (value) {
+                suggestion.classList.add('active')
+            } else {
+                suggestion.classList.remove('active')
+            }
+        }
+        // 禁止自动补全 autocomplete = "off"
+    </script>
+</body>
+
+</html>
