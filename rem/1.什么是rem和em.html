@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>什么是rem和em</title>
+    <style>
+        div {
+            border: 1px solid red;
+            width: 100px;
+            height: 60px;
+        }
+        /* span {
+            border: 1px solid red;
+            font-size: 12px; */
+            /* 下面的1em此时等于元素的font-size属性值即为12px */
+            /* margin-left: 1em;   
+        } */
+        span {
+            border: 1px solid red;
+            /* 注意此时的1em相对于父元素的font-size属性值，也即div的font-size属性值。那么下面1em均为16px */
+            font-size: 1em;
+            margin-left: 1em;
+        }
+    </style>
+</head>
+<body>
+    <!-- em和rem都是相对长度单位 -->
+    <!-- 1.em  按照css的定义：1em等于元素的font-size属性值，也即若元素的font-size属性值变了，那么1em的值也会跟着改变 -->
+    <!-- 若给元素的font-size属性值设置成em单位，那么1em等于其父元素的font-size属性值，但是若给元素设置margin、padding属性，那么
+         1em等于该元素的font-size属性值，看下面例子。 -->
+    <div>
+        <span>编辑</span>
+    </div>
+
+    <!-- 2.rem单位：与em单位类似，rem也是基于字号的计算。二者的区别很小，rem始终相对于根元素进行计算。在HTML中 -->
+    <!-- 根元素是html。故font-size：1rem;声明将元素的字号设置成html根元素的大小 -->
+</body>
+</html>
