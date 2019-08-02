@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>多层阴影</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 60px;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: 100px;
+            /* background-color: aqua; */
+            box-shadow: -5px 0 5px red,
+                        5px 0 5px green,
+                        0 -5px 5px gray,
+                        0 5px 5px skyblue;
+
+        }
+        .multiColors {
+            width: 200px;
+            height: 60px;
+            border: 1px solid black;
+            margin: 100px; 
+            box-shadow: 0 0 0 1px red,
+                        0 0 0 2px green,
+                        0 0 0 4px yellow,
+                        0 0 0 8px skyblue;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="box"></div>
+
+    <!-- 制作多层阴影效果时，不设置模糊半径，只设置扩展半径，并配合多个阴影颜色，还可以制作多少边框效果 -->
+    <!-- 注意：使用多层级box-shadow时需要注意阴影的顺序，最先写的阴影将显示在最顶层(也即前面覆盖后面)，
+         依次类推... -->
+    <div class="multiColors"></div>
+
+</body>
+</html>

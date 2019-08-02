@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>四边相同阴影效果</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 60px;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: 100px;
+            /* 想要四周有相同阴影效果只设置阴影模糊半径和颜色即可 */
+            /* box-shadow: 0 0 10px gray; */
+            /* box-shadow: 0 0 10px -2px gray; */
+            box-shadow: 0 0 2px gray;
+        }
+        .box2 {
+            width: 200px;
+            height: 60px;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: 150px;
+            box-shadow: 0 0 0 10px gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1.第一种方式: 想要四周有相同阴影效果只设置阴影模糊半径和颜色即可-->
+    <!-- 此时也可以设置阴影扩展半径，若阴影扩展半径为正，则向外扩展，为负则向内压缩阴影-->
+    <!-- 直到阴影扩展半径的值等于阴影模糊半径时，阴影完全消失  -->
+    <div class="box"></div>
+
+    <!-- 2.第二种方式：想要四周有相同阴影效果只需要设置扩展半径和阴影颜色即可，该效果与10px的border效果一样 -->
+    <!-- 但是box-shadow不会计算到内容宽度，因为它不是盒模型中的元素 -->
+    <!-- box-shadow不会影响页面的布局 -->
+    <div class="box2"></div>
+</body>
+</html>

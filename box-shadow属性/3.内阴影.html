@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>内阴影</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 60px;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: 100px;
+            background-color: aqua;
+            box-shadow: 3px 3px 3px gray;
+        }
+        .img1 {
+            margin: 30px;
+            box-shadow: inset 5px 5px 10px gray;
+            vertical-align: top;
+        }
+        div {
+            display: inline-block;
+            border: 1px solid red;
+            margin: 50px;
+            box-shadow: inset 5px 5px 2px gray;
+        }
+        .img2 {
+            vertical-align: top;
+            z-index: -10;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1.元素默认是外阴影，要想使得阴影相元素内部靠拢，可以使用inset -->
+    <div class="box"></div>
+
+    <!-- 2.注意：box-shadow的内阴影使用在图片上是没有效果的，那么想要使得图片有内阴影的话应该怎么做？ -->
+    <img  class="img1" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1563980539,1672265910&fm=26&gp=0.jpg" alt="">
+
+    <div>
+        <img class="img2" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1563980539,1672265910&fm=26&gp=0.jpg" alt="">
+    </div>
+</body>
+</html>

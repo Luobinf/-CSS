@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>单边阴影效果</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: 20px;
+            /* box-shadow: 10px 0 0 gray; */
+            /* 这里面的第三个值为阴影模糊半径,这样还不能实现单边阴影效果，给了模糊半径之后，其它的边也会往外扩展，那怎么办呢？ */
+            /* box-shadow提供了阴影扩展半径参数可以用来调整 */
+            /* box-shadow: 2px 2px 1px gray; */
+            box-shadow: 0 3px 5px -3px gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- box-shadow的第一个参数是x-offset，第二个参数是y-offset，分别表示x轴和y轴的偏移量。第三个参数是阴影模糊半径，第四个 -->
+    <!-- 参数是阴影扩展半径。 -->
+    <!--  -->
+    <div class="box">
+
+    </div>
+</body>
+</html>
